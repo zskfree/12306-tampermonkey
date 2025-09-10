@@ -4,7 +4,7 @@
 
 1. **安装 Tamy 浏览器扩展**：
    - 访问 [Tampermonkey 官网](https://www.tampermonkey.net/) 下载并安装浏览器扩展。
-   - 支持 Chrome、Firefox、Edge 等主流浏览器。
+   - 支持 Chrome、Firefox、Edge 等主流浏览器。(最好使用谷歌浏览器，并打开扩展的开发者模式，亲测可用，其他浏览器不保证能用)
 
 2. **安装脚本**：
    - 点击上方安装链接，或直接访问 [Greasy Fork 页面](https://greasyfork.org/zh-CN/scripts/548991-12306自动抢票)。
