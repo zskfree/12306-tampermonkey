@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         12306自动抢票
 // @namespace    http://tampermonkey.net/
-// @version      2025-09-10
+// @version      2025-09-12
 // @description  已登录后自动查询->点预订->勾选乘客->优先席别->提交订单。不会绕过登录或验证码。
 // @author       zskfree
 // @match        https://kyfw.12306.cn/otn/leftTicket/init*
 // @match        https://kyfw.12306.cn/otn/confirmPassenger/*
 // @grant        none
+// @license MIT
 // ==/UserScript==
 
 (function () {
@@ -96,15 +97,6 @@
         if (flag) sessionStorage.setItem(RUN_KEY, '1');
         else sessionStorage.removeItem(RUN_KEY);
         updateUIState();
-    }
-
-    // 获取当前时间信息
-    function getCurrentTimeInfo() {
-        const now = new Date();
-        const currentTime = now.getHours().toString().padStart(2, '0') + ':' +
-            now.getMinutes().toString().padStart(2, '0');
-        const currentSeconds = now.getSeconds();
-        return { currentTime, currentSeconds, now };
     }
 
     // 解析计划时间为今天的时间戳
@@ -1164,7 +1156,7 @@
 
         try {
             sessionStorage.setItem('tm_12306_auto_booking', '1');
-            await sleep(100);
+            await sleep(150);
             await selectPassengers();
             await sleep(60);
             pickSeatPrefer();
