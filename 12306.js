@@ -8,6 +8,8 @@
 // @match        https://kyfw.12306.cn/otn/confirmPassenger/*
 // @grant        none
 // @license MIT
+// @downloadURL https://update.greasyfork.org/scripts/548991/12306%E8%87%AA%E5%8A%A8%E6%8A%A2%E7%A5%A8.user.js
+// @updateURL https://update.greasyfork.org/scripts/548991/12306%E8%87%AA%E5%8A%A8%E6%8A%A2%E7%A5%A8.meta.js
 // ==/UserScript==
 
 (function () {
